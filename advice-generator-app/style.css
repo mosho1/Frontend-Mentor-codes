@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(218, 23%, 16%);
+  margin: 0;
+}
+
+.container {
+  display: block;
+  border: solid red;
+  width: 600px;
+}
+.advice-card {
+  text-align: center;
+  background-color: hsl(217, 19%, 24%);
+  padding: 20px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 10% auto;
+}
+#advice-id {
+  font-size: 1.2em;
+  color: hsl(150, 100%, 66%);
+  margin-bottom: 20px;
+}
+#advice-text {
+  font-size: 28px;
+  font-family: "Manrope";
+  color: hsl(193, 38%, 86%);
+  margin-bottom: 20px;
+}
+.mobile-img {
+  display: none;
+}
+.desktop-img {
+  width: 80%;
+}
+#generate-btn img {
+  width: 20px;
+}
+#generate-btn {
+  background-color: hsl(150, 100%, 66%);
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 20px; 
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+#generate-btn:hover {
+  /* background-color: aqua; */
+  box-shadow: 0 0 12px hsl(150, 100%, 66%, 0.9),
+    0 0 24px hsl(150, 100%, 66%, 0.7), 0 0 36px hsl(150, 100%, 66%, 0.5);
+}
+@media (max-width: 768px) {
+  .advice-card {
+    max-width: 360px;
+  }
+
+  .mobile-img {
+    display: block;
+  }
+  .desktop-img {
+    display: none;
+  }
+}

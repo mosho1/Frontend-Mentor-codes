@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive page layout</title>
+    <style></style>
+  </head>
+  <body>
+    <section class="form-section">
+      <div class="card-container">
+        <div class="front-card">
+          <div class="logo">
+            <img src="images/card-logo.svg" alt="Caer-Lgo" />
+          </div>
+          <p class="card-number">0000 0000 0000 0000</p>
+          <div class="card-detail">
+            <p class="card-name">Jane Appleseed</p>
+            <p class="card-expiry">00/00</p>
+          </div>
+        </div>
+        <div class="back-card">
+          <p class="card-cvc">000</p>
+        </div>
+      </div>
+      <form id="card-form">
+        <div class="main-details">
+          <div class="input-wrapper">
+            <label for="cardholder">Cardholder Name</label>
+            <input
+              type="text"
+              name="cardholder"
+              id="cardholder"
+              placeholder="e.g Jane Appleseed"
+              required
+            />
+            <span class="error" id="cardholder-error">Letters only</span>
+          </div>
+          <div class="input-wrapper">
+            <label for="card-number">Card Number</label>
+            <input
+              type="text"
+              name="card-number"
+              id="card-number"
+              placeholder="e.g 1234 5678 9123 0000"
+              maxlength="19"
+              required
+            />
+            <span class="error" id="card-number-error"
+              >Wrong format, numbers only</span
+            >
+          </div>
+        </div>
+        <div class="expiry-group">
+          <div class="input-group">
+            <label for="exp-month">Exp.Date(MM/YY)</label>
+            <input
+              type="text"
+              name="exp-month"
+              id="exp-month"
+              placeholder="MM"
+              maxlength="2"
+              required
+            />
+
+            <input
+              type="text"
+              name="exp-year"
+              id="exp-year"
+              placeholder="YY"
+              maxlength="2"
+              required
+            />
+            <span class="error" id="exp-date-error">Can't be blank</span>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="cvc">CVC</label>
+            <input
+              type="text"
+              name="cvc"
+              id="cvc"
+              maxlength="3"
+              placeholder="e.g 123"
+              required
+            />
+            <span class="error" id="cvc-error">Can't be blank</span>
+          </div>
+        </div>
+        <button type="submit">Confirm</button>
+      </form>
+      <div class="completion-state" id="completion-state">
+        <img src="images/icon-complete.svg" alt="completion-state-LOGO" />
+        <h2>Thank You!</h2>
+        <p>We've added your card details</p>
+        <button onclick="resetForm()">Continue</button>
+      </div>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Moshood</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

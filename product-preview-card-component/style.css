@@ -79,6 +79,9 @@ button {
   justify-content: center;
   gap: 12px;
 }
+button:hover {
+  background-color: hsl(158, 36%, 20%);
+}
 
 @media (max-width: 768px) {
   .container {
